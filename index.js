@@ -13,7 +13,7 @@ import userRouter from "./routes/user.js"
 app.use("/", userRouter)
 app.use(express.static("public"))
 
-const port = 3333
+const port = process.env.PORT
 app.listen(port,_ => {
     console.log(`Server started at ${port}`)
 })
